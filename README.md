@@ -101,10 +101,13 @@ CLAUDE.md              ← Claude Code 项目级自动发现桥接文件
 
 ## 致谢
 
-感谢真诚、友善、团结、专业的 **LinuxDo** 社区，让我学到那么多有关 AI 的相关知识。
+感谢真诚、友善、团结、专业的 [LinuxDo 社区](https://linux.do/latest)，让我学到很多 AI 相关的知识和玩法。
 
-- **LinuxDo**（https://linux.do/）
-- **LinuxDo 学 AI，上 L 站！**
+> LinuxDo — 学 AI，上 L 站
+
+## 许可
+
+MIT
 
 ## 知识库索引
 
