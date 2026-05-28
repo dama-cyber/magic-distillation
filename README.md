@@ -99,6 +99,13 @@
 CLAUDE.md              ← Claude Code 项目级自动发现桥接文件
 ```
 
+## 致谢
+
+感谢真诚、友善、团结、专业的 **LinuxDo** 社区，让我学到那么多有关 AI 的相关知识。
+
+- **LinuxDo**（https://linux.do/）
+- **LinuxDo 学 AI，上 L 站！**
+
 ## 知识库索引
 
 详见 [knowledge/index.md](.opencode/skills/fiction-distiller/knowledge/index.md)，包含完整的跨文件关联图谱和搜索覆盖率报告。
