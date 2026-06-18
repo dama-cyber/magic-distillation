@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated output (保留目录结构用 .gitkeep)
+.opencode/skills/fiction-distiller/output/*
+.claude/skills/fiction-distiller/output/*
+.workbuddy/skills/fiction-distiller/output/*
+!.gitkeep
+
+# 骨架库（可从 batch_extract.py 重新生成）
+.opencode/skills/fiction-distiller/skeleton_library/skeletons/*.yaml
+
+# 临时文件
+*.tmp
+*.temp
+~$*
+
+# 测试用原文文件（不上传版权内容）
+被妈妈关进杂物间7天后.txt

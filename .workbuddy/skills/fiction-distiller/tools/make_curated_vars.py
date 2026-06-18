@@ -1,0 +1,57 @@
+import json
+from pathlib import Path
+
+variables = [
+    {"id":"V001","type":"人物","original":"李明婷","function":"主角","new_design":"林夏（后改名苏野）","replaced":False},
+    {"id":"V002","type":"人物","original":"李明娉","function":"假千金/对立","new_design":"林婉儿","replaced":False},
+    {"id":"V003","type":"人物","original":"李明成","function":"二哥","new_design":"林屿","replaced":False},
+    {"id":"V004","type":"人物","original":"李凯恪","function":"生父","new_design":"林正廷","replaced":False},
+    {"id":"V005","type":"人物","original":"方女士","function":"生母","new_design":"沈夫人","replaced":False},
+    {"id":"V006","type":"人物","original":"李明珠","function":"大姐","new_design":"林悦","replaced":False},
+    {"id":"V007","type":"人物","original":"深海","function":"救赎者/神秘网友","new_design":"山风（真名江沉）","replaced":False},
+    {"id":"V008","type":"人物","original":"医生","function":"诊断者","new_design":"周医生","replaced":False},
+    {"id":"V009","type":"人物","original":"粉丝","function":"旁观者","new_design":"网友/观众","replaced":False},
+    {"id":"V010","type":"人物","original":"李明成二号","function":"二哥小号","new_design":"林屿二号","replaced":False},
+    {"id":"V011","type":"地点","original":"医院","function":"诊断场所","new_design":"市立医院","replaced":False},
+    {"id":"V012","type":"地点","original":"李家别墅","function":"原生家庭住所","new_design":"林家老宅","replaced":False},
+    {"id":"V013","type":"地点","original":"云南","function":"第一站旅行地","new_design":"青城","replaced":False},
+    {"id":"V014","type":"地点","original":"苏州","function":"第二站旅行地","new_design":"溪口镇","replaced":False},
+    {"id":"V015","type":"地点","original":"三亚","function":"第三站旅行地","new_design":"岚海","replaced":False},
+    {"id":"V016","type":"地点","original":"北京","function":"老家","new_design":"松城","replaced":False},
+    {"id":"V017","type":"地点","original":"乌镇","function":"旅行地","new_design":"雾镇","replaced":False},
+    {"id":"V018","type":"地点","original":"黄山","function":"登山地","new_design":"竹山","replaced":False},
+    {"id":"V019","type":"地点","original":"瑞士","function":"求婚地","new_design":"云栖国","replaced":False},
+    {"id":"V020","type":"地点","original":"第一医院","function":"治疗医院","new_design":"省血液中心","replaced":False},
+    {"id":"V021","type":"时间","original":"前世","function":"前世人生","new_design":"上一世","replaced":False},
+    {"id":"V022","type":"时间","original":"这辈子","function":"重生后","new_design":"这一世","replaced":False},
+    {"id":"V023","type":"时间","original":"确诊当天","function":"故事起点","new_design":"拿到报告那天","replaced":False},
+    {"id":"V024","type":"时间","original":"第二天","function":"次日","new_design":"第二天","replaced":False},
+    {"id":"V025","type":"时间","original":"半个月","function":"半个月后","new_design":"两周后","replaced":False},
+    {"id":"V026","type":"时间","original":"三年","function":"三年后","new_design":"三年后","replaced":False},
+    {"id":"V027","type":"道具/意象","original":"诊断书","function":"疾病证明","new_design":"基因检测报告","replaced":False},
+    {"id":"V028","type":"道具/意象","original":"直播间","function":"直播平台","new_design":"直播频道","replaced":False},
+    {"id":"V029","type":"道具/意象","original":"弹幕","function":"实时评论","new_design":"留言","replaced":False},
+    {"id":"V030","type":"道具/意象","original":"烟花","function":"直播礼物","new_design":"星焰","replaced":False},
+    {"id":"V031","type":"道具/意象","original":"梦幻城堡","function":"直播礼物","new_design":"水晶城堡","replaced":False},
+    {"id":"V032","type":"道具/意象","original":"花环","function":"男主角送的礼物","new_design":"草编手环","replaced":False},
+    {"id":"V033","type":"道具/意象","original":"桔梗花","function":"女主角手持花","new_design":"山茶花","replaced":False},
+    {"id":"V034","type":"道具/意象","original":"九齿钉耙","function":"赶海工具","new_design":"小锄头","replaced":False},
+    {"id":"V035","type":"道具/意象","original":"止疼药","function":"止痛药物","new_design":"镇痛片","replaced":False},
+    {"id":"V036","type":"道具/意象","original":"海鲜粥","function":"养胃食物","new_design":"菌菇粥","replaced":False},
+    {"id":"V037","type":"道具/意象","original":"汉服","function":"传统服饰","new_design":"民族服饰","replaced":False},
+    {"id":"V038","type":"道具/意象","original":"假发","function":"化疗后用品","new_design":"假发套","replaced":False},
+    {"id":"V039","type":"道具/意象","original":"布偶小熊","function":"童年玩偶","new_design":"旧布偶","replaced":False},
+    {"id":"V040","type":"道具/意象","original":"小提琴","function":"假千金特长","new_design":"古筝","replaced":False},
+    {"id":"V041","type":"台词","original":"你这是胃癌。","function":"医生宣告病情","new_design":"是先天性造血衰竭。","replaced":False},
+    {"id":"V042","type":"台词","original":"姐姐也为我感到高兴吗？","function":"假千金挑衅","new_design":"姐姐也会为我开心吧？","replaced":False},
+    {"id":"V043","type":"台词","original":"你的脸色很不好，有时间去医院看看吧。","function":"山风初次关心","new_design":"你脸色很差，最好去查查。","replaced":False},
+    {"id":"V044","type":"台词","original":"哥哥带你去医院。","function":"二哥劝医","new_design":"哥哥带你去中心。","replaced":False},
+    {"id":"V045","type":"台词","original":"我们一起治疗，好不好？","function":"男主求婚/求治疗","new_design":"我们一起治，好吗？","replaced":False},
+]
+
+out = Path("../output/奔向爱与自由_李明婷_分章.variables.json")
+out.write_text(
+    json.dumps({"variable_count": len(variables), "variables": variables}, ensure_ascii=False, indent=2),
+    encoding="utf-8",
+)
+print(f"已写入 curated 变量列表：{out}，共 {len(variables)} 条")

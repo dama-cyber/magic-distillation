@@ -1,0 +1,30 @@
+{
+  "total_files": 2224,
+  "processed": 1120,
+  "skipped_too_short": 1104,
+  "skipped_boilerplate_title": 0,
+  "skipped_read_error": 0,
+  "genre_distribution": {
+    "亲情伦理": 466,
+    "穿越重生": 86,
+    "豪门世家": 55,
+    "虐恋言情": 218,
+    "复仇逆袭": 19,
+    "悬疑惊悚": 394,
+    "校园青春": 343,
+    "都市生活": 146,
+    "婆媳家庭": 57,
+    "系统金手指": 12
+  },
+  "length_distribution": {
+    "中篇": 494,
+    "长篇": 510,
+    "超长": 116
+  },
+  "opening_distribution": {
+    "直叙开篇": 868,
+    "悬念开篇": 226,
+    "回忆开篇": 23,
+    "对话切入": 3
+  }
+}
